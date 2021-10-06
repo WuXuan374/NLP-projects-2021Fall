@@ -209,7 +209,6 @@ public class MultiTopDownParser {
             boolean isEOS = false;
             // 对于每一条规则, 初始状态都要置成一样的
             st.set(_st.startIndex, _st.token, _st.value);
-//
             for (Type type: types) {
                 Result res = genericParse(st, s, type);
                 if (!res.valid) {
@@ -244,7 +243,7 @@ public class MultiTopDownParser {
     }
 
     public static void main(String[] args) {
-        String s = "The cat receive a pen".toLowerCase();
+        String s = "The ugly cat receive a beautiful pen".toLowerCase();
         MultiTopDownParser atp = new MultiTopDownParser();
         atp.test(Arrays.asList(s.split(" ")));
     }
