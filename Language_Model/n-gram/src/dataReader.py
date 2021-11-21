@@ -17,7 +17,6 @@ class DataReader:
         #     self.stopWords = f.read().split()
         self.stopWords = ['，', '、', '：', '[', ']', '《', '》', '"', '！', '；', '？']
         self.sentences = []
-        print(self.stopWords)
         files = [join(data_dir, f) for f in listdir(data_dir) if isfile(join(data_dir, f))]
         for file in files:
             with open(file,  encoding='gbk') as f:
